@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Testing Animation upwork</title>
     <style>
       * {
         margin: 0;
@@ -15,7 +15,7 @@
         display: flex;
         position: relative;
         opacity: 0;
-        transform: translateY(-20px); /* Slight upward movement */
+        transform: translateY(-20px);
         animation: fadeIn 0.6s ease-out forwards;
       }
       .first-block {
@@ -28,7 +28,46 @@
         background-color: yellow;
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
+      }
+
+      #star2 {
+        animation: move 0.5s ease-in forwards;
+        transform: translateY(-60px);
+      }
+      #star3 {
+        animation: move 0.8s ease-in forwards;
+        transform: translateY(-60px);
+        animation-delay: 0.5s;
+      }
+      #star4 {
+        animation: move 0.9s ease-in forwards;
+        transform: translateY(-60px);
+        animation-delay: 1.3s;
+      }
+      #cheee {
+        animation: fadeInUp 0.6s ease-out forwards;
+        transform: translateY(26px);
+        animation-delay: 1s;
+      }
+      #cheeehaw {
+        animation: fadeInSlide 0.6s ease-out forwards;
+        animation-delay: 1.4s;
+        opacity: 0;
+      }
+
+      #usaText {
+        animation: scale 0.6s ease-out forwards;
+        animation-delay: 2s;
+        opacity: 0;
+      }
+      @keyframes move {
+        from {
+          transform: translateY(-60px);
+        }
+        to {
+          transform: translateY(0);
+        }
       }
 
       @keyframes fadeIn {
@@ -41,6 +80,67 @@
           transform: translateY(0);
         }
       }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes scale {
+        0% {
+          opacity: 0;
+          transform: scale(1.05);
+        }
+        50%{
+            transform: scale(1.05);
+            transform-origin: center;
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+
+      @keyframes fadeInScale {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeInRotate {
+        0% {
+          opacity: 0;
+          transform: rotate(-10deg) translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: rotate(0deg) translateY(0);
+        }
+      }
+
+      @keyframes fadeInSlide {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      /* Apply the animations with staggered delays for effect */
     </style>
   </head>
   <body>
@@ -68,6 +168,7 @@
             <g>
               <g>
                 <path
+                  id="cheeehaw"
                   style="fill: #7d1516"
                   d="M98.888,195.906h0.143l10.457-32.276h14.165v46.108h-10.743v-29.707h-0.19l-10.125,29.707H95.37
 				l-9.982-29.281l-0.19,0.048v29.233H74.502V163.63h14.022L98.888,195.906z M155.692,200.802h-13.689l-2.662,8.936h-11.313
@@ -80,43 +181,51 @@
 				l-0.238,0.047v28.948h-10.695V163.63h10.695l16.923,28.997l0.19-0.048V163.63h10.648V209.738z"
                 />
                 <path
+                id="usaText"
                   style="fill-rule: evenodd; clip-rule: evenodd; fill: #7d1516"
                   d="M74.502,218.581h250.987v76.293
 				c0,6.181-5.039,11.22-11.172,11.22H85.721c-6.18,0-11.218-5.039-11.218-11.22V218.581z"
                 />
                 <rect
-                  x="74.502"
+                id="star2"
+                x="74.502"
                   y="144.807"
                   style="fill-rule: evenodd; clip-rule: evenodd; fill: #7d1516"
                   width="250.987"
                   height="2.899"
                 />
                 <polygon
+                  id="star4"
                   style="fill: #7d1516"
                   points="199.805,93.944 206.889,107.871 222.385,109.963 211.356,120.991 214.16,136.392 
 				200.233,129.262 186.496,136.726 188.92,121.276 177.606,110.486 193.055,108.061 			"
                 />
                 <polygon
+                  id="star3"
                   style="fill: #7d1516"
                   points="155.265,111.912 159.876,120.943 169.858,122.274 162.728,129.405 164.534,139.34 
 				155.55,134.728 146.661,139.578 148.23,129.595 140.957,122.607 150.892,121.039 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="125.745,127.076 127.837,131.116 132.353,131.734 129.12,134.967 129.976,139.482 
 				125.888,137.392 121.895,139.578 122.608,135.062 119.28,131.876 123.796,131.163 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="103.403,127.076 105.448,131.116 109.964,131.734 106.731,134.967 107.587,139.482 
 				103.498,137.392 99.506,139.578 100.219,135.062 96.892,131.876 101.407,131.163 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="81.015,127.076 83.059,131.116 87.574,131.734 84.342,134.967 85.198,139.482 
 				81.11,137.392 77.117,139.578 77.83,135.062 74.502,131.876 79.018,131.163 			"
                 />
                 <rect
+                  id="cheee"
                   x="74.502"
                   y="118.947"
                   style="fill-rule: evenodd; clip-rule: evenodd; fill: #7d1516"
@@ -124,26 +233,31 @@
                   height="2.9"
                 />
                 <polygon
+                  id="star3"
                   style="fill: #7d1516"
                   points="244.726,111.912 240.163,120.943 230.133,122.274 237.31,129.405 235.456,139.34 
 				244.441,134.728 253.33,139.578 251.762,129.595 259.081,122.607 249.101,121.039 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="274.246,127.076 272.155,131.116 267.638,131.734 270.871,134.967 270.063,139.482 
 				274.103,137.392 278.144,139.578 277.432,135.062 280.71,131.876 276.195,131.163 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="296.633,127.076 294.543,131.116 290.028,131.734 293.261,134.967 292.451,139.482 
 				296.492,137.392 300.533,139.578 299.819,135.062 303.1,131.876 298.585,131.163 			"
                 />
                 <polygon
+                  id="star2"
                   style="fill: #7d1516"
                   points="319.024,127.076 316.933,131.116 312.416,131.734 315.648,134.967 314.841,139.482 
 				318.881,137.392 322.922,139.578 322.209,135.062 325.489,131.876 320.973,131.163 			"
                 />
                 <rect
+                  id="cheee"
                   x="268.494"
                   y="118.947"
                   style="fill-rule: evenodd; clip-rule: evenodd; fill: #7d1516"
@@ -154,12 +268,14 @@
             </g>
             <g>
               <path
+              id="usaText"
                 style="fill: #ffffff"
                 d="M166.869,227.961v44.512c0,7.859-2.61,14.012-7.828,18.461c-5.218,4.447-12.024,6.672-20.417,6.672
 			c-8.456,0-15.309-2.225-20.559-6.672c-5.25-4.449-7.875-10.602-7.875-18.461v-44.512h15.985v44.512c0,4.244,1.1,7.449,3.301,9.619
 			c2.2,2.168,5.249,3.254,9.147,3.254c3.866,0,6.876-1.076,9.03-3.23c2.153-2.152,3.23-5.367,3.23-9.643v-44.512H166.869z"
               />
               <path
+              id="usaText"
                 style="fill: #ffffff"
                 d="M212.842,278.414c0-2.453-0.801-4.33-2.404-5.635c-1.604-1.305-4.512-2.695-8.723-4.174
 			c-8.52-2.766-14.846-5.713-18.979-8.84c-4.134-3.129-6.201-7.631-6.201-13.51c0-5.752,2.405-10.404,7.214-13.957
@@ -172,6 +288,7 @@
 			C212.024,282.281,212.842,280.553,212.842,278.414z"
               />
               <path
+              id="usaText"
                 style="fill: #ffffff"
                 d="M273.387,283.272h-20.418l-3.961,13.344h-16.785l22.396-68.654h8.535v0.047l0.047-0.047h8.535
 			l22.444,68.654h-16.786L273.387,283.272z M256.646,271.012h13.063l-6.413-21.314h-0.283L256.646,271.012z"
